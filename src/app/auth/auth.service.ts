@@ -9,8 +9,8 @@ export class AuthService {
   constructor(private http: HttpClient) { }
   baseUrl = "https://accounts.spotify.com/authorize?"
   clientId = "e86426a19d63411b9c809f375783f30d"
-  //  redirectUri = "https://d1yzx6o8wv86t6.cloudfront.net/player"
-   redirectUri = "http://localhost:4200/player"
+   redirectUri = "https://imawesome007.github.io/spotify-clone/player"
+  //  redirectUri = "http://localhost:4200/player"
   scope = "user-read-private user-read-email streaming user-read-playback-state user-modify-playback-state user-read-recently-played  app-remote-control"
 
   authorizeSpotify() {
