@@ -1,0 +1,9 @@
+<div class="container">
+  <a [routerLink]="" (click)="goToNewlyReleasesAlbum()">&#8668;go back to albums&#8668;</a>
+  <div class="row">
+    <a [routerLink]="" class="col-md-12 tracks" *ngFor="let track of this.tracks" (click)="playTracks(track)">
+      <h5>{{track.name}}</h5>
+      <small>durration-{{millisToMinutesAndSeconds(track.duration_ms)}} artist-{{getArtist(track)}}</small>
+    </a>
+  </div>
+</div>

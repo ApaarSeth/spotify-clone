@@ -1,0 +1,17 @@
+.tracks {
+  color: white;
+  background-color: rgb(49, 49, 102);
+  border-radius: 50%;
+  margin-top: 2rem;
+  width: 50%;
+  text-align: center;
+}
+
+a {
+  display: block;
+  text-align: center;
+}
+
+a:hover {
+  color: rgb(143, 238, 99);
+}

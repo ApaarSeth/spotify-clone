@@ -1,0 +1,44 @@
+<!-- <a href='#' id="btnPrevious" title="" (click)='previous()'>
+  <img src='assets/images/prev.png' />
+</a>
+<a href='#' id="btnPlayPause">
+  <img src='assets/images/play.png' />
+  <img src='assets/images/pause.png' />
+</a>
+ <a href='#' id="btnPlayPause" (click)='togglePlayPause()'>
+    <img src='assets/images/play.png' [class.hide]='isPlaying'/>
+    <img src='assets/images/pause.png' [class.hide]='!isPlaying'/>
+  </a> 
+<a href='#' id="btnNextSong" (click)='next()'>
+  <img src='assets/images/next.png' />
+</a> -->
+
+<div id='player' *ngIf="this.track">
+  <div *ngIf="this.track" class="card" style="width:15rem">
+    <img class="card-img-top" src="{{track.image}}" alt="track cover">
+    <div class="card-body">
+      <h5 class="card-title">{{track.name}}</h5>
+      <p class="card-text">artist-{{getArtist()}}</p>
+    </div>
+  </div>
+  <a id="btnPrevious" title="" (click)="playPreviousSong()">
+    <img src='assets/images/prev.png' />
+  </a>
+
+  <a *ngIf="!this.isPlaying" class="btnPlayPause" (click)="playSong()">
+    <img src='assets/images/play.png'>
+  </a>
+  <a *ngIf="this.isPlaying" class="btnPlayPause" (click)="pauseSong()">
+    <img src='assets/images/pause.png'>
+  </a>
+  <a id="btnNextSong" (click)="playNextSong()">
+    <img src='assets/images/next.png' />
+  </a>
+</div>
+
+<!-- <div>
+  <a id="newAlbums" routerLink="" (click)="showAlbums()">
+    {{this.showAlbum?"getNewReleasesAlbums":""}}
+  </a>
+</div> -->
+<br>

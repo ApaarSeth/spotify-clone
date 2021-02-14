@@ -1,0 +1,18 @@
+.form-group{
+    width:70%;
+    margin:5rem auto 5rem auto;
+}
+
+.searchImage{
+    border-style:solid;
+    border-color: black;
+    width:5rem;
+    height:5rem;
+    /* float: left; */
+}
+
+ul.songDetails {
+    display: inline-block;
+    /* float: l */
+    list-style-type: none;
+}

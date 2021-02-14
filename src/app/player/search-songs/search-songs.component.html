@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="form-group">
+    <input type="text" placeholder="Search Music..." (keyup)="searchMusic()" name="searchString" [(ngModel)]="searchStr"
+      class="form-control">
+  </div>
+  <div *ngIf=getSearchStr()>
+    <div *ngFor="let album of this.albums">
+      <div class="list-group mb-2" >
+        <a class="list-group-item" [routerLink]="['../player/tracks',album.id,album.type,getAlbumImage(album)]">
+          <img class="searchImage" [src]="getAlbumImage(album)" alt="">
+          <ul class="songDetails">
+            <li>
+              Album- {{album.name}}
+            </li>
+          </ul>
+        </a>
+      </div>
+    </div>
+    <!-- <div *ngFor="let album of someArtist()">
+      <a routerLink="" (click)=playTracks(album)>
+        <div class="row">
+          <div class="col-md-12">
+            <img src="" alt="">
+          </div>
+        </div>
+      </a>
+    </div> -->
+    <div *ngFor="let track of this.tracks">
+      <div class="list-group mb-2">
+        <a class="list-group-item" [routerLink]="['../player/tracks',track.id,track.type,getTrackImage(track)]">
+          <img class="searchImage" [src]="getTrackImage(track)" alt="">
+          <ul class="songDetails">
+            <li>
+              Song- {{track.name}}
+            </li>
+            <li>
+              duration- {{millisToMinutesAndSeconds(track.duration_ms)}}
+            </li>
+          </ul>
+        </a>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>Newly Released Albums</h3>
+  <br>
+  <div class="row">
+    <div class="col-xs-3 mb-2 mr-2" *ngFor="let album of this.album">
+      <a  [routerLink]="['../tracks',album.id,album.type,album.image]">
+        <div class="card" style="width:15rem">
+          <img class="card-img-top" src="{{album.image}}" alt="album cover">
+          <div class="card-body">
+            <h5 class="card-title">{{album.name}}</h5>
+            <p class="card-text">artist-{{album.artist.toString()}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
